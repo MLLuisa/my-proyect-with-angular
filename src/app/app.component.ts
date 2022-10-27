@@ -15,4 +15,13 @@ export class AppComponent {
     age: 20,
     avatar: 'https://via.placeholder.com/150'
   }
+  toggleButton() {
+    this.btnDisable = !this.btnDisable;
+  }
+  increaseAge() {
+    this.person.age += 1;
+  }
+  decreaseAge() {
+    this.person.age -= 1;
+  }
 }
