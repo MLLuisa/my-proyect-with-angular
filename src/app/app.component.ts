@@ -15,6 +15,14 @@ export class AppComponent {
     age: 20,
     avatar: 'https://via.placeholder.com/150'
   }
+
+  names: string[] = ['Nico', 'Juli', 'Santi'];
+  newName = '';
+
+  thingsToDo = ['Estudiar typescript', 'estudiar angular', 'buscar un curro'];
+  newThings = '';
+
+
   toggleButton() {
     this.btnDisable = !this.btnDisable;
   }
@@ -31,6 +39,19 @@ export class AppComponent {
   changeName(event: Event) {
     const element = event.target as HTMLInputElement;
     this.person.name = element.value;
-
+  }
+  addName() {
+    this.names.push(this.newName);
+    this.newName = '';
+  }
+  deleteName(index: number) {
+    this.names.splice(index, 1);
+  }
+  addThings() {
+    this.thingsToDo.push(this.newThings);
+    this.newThings = '';
+  }
+  deleteThings(index: number) {
+    this.thingsToDo.splice(index, 1);
   }
 }
