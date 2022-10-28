@@ -1,3 +1,11 @@
+<h1>*ngForObjects</h1>
+<div *ngFor="let product of products">
+  <img width="250" [src]="product.image" alt="image" />
+  <h2>{{ product.price }}</h2>
+  <p>{{ product.name }}</p>
+</div>
+
+<hr />
 <h1>*ngFor</h1>
 <button (click)="addName()">Add name</button>
 <input type="text" required [(ngModel)]="newName" />
