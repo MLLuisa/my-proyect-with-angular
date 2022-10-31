@@ -1,7 +1,7 @@
 <h1>Formularios</h1>
 <form (ngSubmit)="onRegister()" #myForm="ngForm" class="form">
   <div class="input-group">
-    <legend>My account</legend>
+    <legend>User register:</legend>
     <label for="name">Name: </label>
     <input
       type="text"
@@ -38,6 +38,36 @@
     />
   </div>
   <button [disabled]="myForm.invalid" type="submit" class="button">Edit</button>
+</form>
+<form>
+  <legend>User Login:</legend>
+  <div class="input-group">
+    <label for="email">Mail address: </label>
+    <input
+      type="email"
+      required
+      name="email"
+      id="email"
+      class="input"
+      placeholder="E-mail"
+      [(ngModel)]="register.email"
+    />
+  </div>
+  <div class="input-group">
+    <label for="password">Passoword: </label>
+    <input
+      type="password"
+      required
+      name="password"
+      id="password"
+      class="input"
+      placeholder="Password"
+      [(ngModel)]="register.password"
+    />
+  </div>
+  <button [disabled]="myForm.invalid" type="submit" class="button">
+    Log-in
+  </button>
 </form>
 
 <hr />
