@@ -7,6 +7,7 @@ import { Product } from './product.model';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  widthImg = 10;
   name =  'Maria';
   age = 20;
   image = 'https://via.placeholder.com/150';
