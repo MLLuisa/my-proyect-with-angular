@@ -88,6 +88,41 @@ legend {
   font-weight: bold;
 }
 
+.wrapper--header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  div {
+    button {
+    border: 1px solid grey;
+    opacity: 0.7;
+    margin-right: 5px;
+    cursor: pointer;
+    background-color: rgb(245, 240, 240);
+    border-radius: 3px;
+    width: auto;
+    height: 25px;
+  }
+  }
+}
+
+.title--header {
+  padding-right: 50px;
+}
+
+.fa-cart-plus {
+  font-size: 26px;
+  background-color: rgb(211, 246, 211);
+  width: 50px;
+  border-radius: 10px;
+  height: 34px;
+  text-align: center;
+  padding-top: 10px;
+  margin-bottom: 5px;
+  transform: translate(220px, -45px);
+  cursor: pointer;
+}
+
 @media screen and (min-width: 40em) {
   .products--grid {
     display: grid;

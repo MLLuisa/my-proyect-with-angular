@@ -4,8 +4,9 @@ import { Product } from './product.model';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
 })
+
 export class AppComponent {
   widthImg = 10;
   box = {
@@ -36,7 +37,7 @@ export class AppComponent {
 
   products: Product[] = [
     {
-      name: 'EL mejor juguete',
+      name: 'El mejor juguete',
       price: 565,
       image: './assets/images/toy.jpg',
       category: 'all',
@@ -62,46 +63,70 @@ export class AppComponent {
       image: './assets/images/house.jpg'
     },
     {
-      name: 'Gafas',
+      name: 'El mejor juguete',
       price: 3434,
-      image: './assets/images/glasses.jpg'
+      image: './assets/images/toy.jpg'
+    },
+    {
+      name: 'Casa para perro',
+      price: 565,
+      image: './assets/images/house.jpg',
+      category: 'all',
+    },
+    {
+      name: 'Mis libros',
+      price: 565,
+      image: './assets/images/books.jpg',
+      category: 'all',
+    },
+    {
+      name: 'Bicicleta casi nueva',
+      price: 565,
+      image: './assets/images/bike.jpg',
+      category: 'all',
+    },
+    {
+      name: 'Colleción de albumnes',
+      price: 565,
+      image: './assets/images/album.jpg',
+      category: 'all',
     }
   ]
 
 
-  toggleButton() {
-    this.btnDisable = !this.btnDisable;
-  }
-  increaseAge() {
-    this.person.age += 1;
-  }
-  decreaseAge() {
-    this.person.age -= 1;
-  }
-  onScroll(event: Event) {
-    const element = event.target as HTMLElement;
-    console.log(element.scrollTop);
-  }
-  changeName(event: Event) {
-    const element = event.target as HTMLInputElement;
-    this.person.name = element.value;
-  }
-  addName() {
-    this.names.push(this.newName);
-    this.newName = '';
-  }
-  deleteName(index: number) {
-    this.names.splice(index, 1);
-  }
-  addThings() {
-    this.thingsToDo.push(this.newThings);
-    this.newThings = '';
-  }
-  deleteThings(index: number) {
-    this.thingsToDo.splice(index, 1);
-  }
-  onRegister() {
-    console.log(this.register);
 
-  }
+toggleButton() {
+  this.btnDisable = !this.btnDisable;
+}
+increaseAge() {
+  this.person.age += 1;
+}
+decreaseAge() {
+  this.person.age -= 1;
+}
+onScroll(event: Event) {
+  const element = event.target as HTMLElement;
+  console.log(element.scrollTop);
+}
+changeName(event: Event) {
+  const element = event.target as HTMLInputElement;
+  this.person.name = element.value;
+}
+addName() {
+  this.names.push(this.newName);
+  this.newName = '';
+}
+deleteName(index: number) {
+  this.names.splice(index, 1);
+}
+addThings() {
+  this.thingsToDo.push(this.newThings);
+  this.newThings = '';
+}
+deleteThings(index: number) {
+  this.thingsToDo.splice(index, 1);
+}
+onRegister() {
+  console.log(this.register);
+}
 }

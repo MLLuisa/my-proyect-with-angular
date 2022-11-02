@@ -1,5 +1,5 @@
 <h1>Formularios</h1>
-<form (ngSubmit)="onRegister()" #myForm="ngForm" class="form">
+<!-- <form (ngSubmit)="onRegister()" #myForm="ngForm" class="form">
   <div class="input-group">
     <legend>User register:</legend>
     <label for="name">Name: </label>
@@ -68,7 +68,7 @@
   <button [disabled]="myForm.invalid" type="submit" class="button">
     Log-in
   </button>
-</form>
+</form> -->
 
 <hr />
 <h1>NgClass& NgStyles</h1>
@@ -136,11 +136,23 @@
 </div>
 <hr />
 <h1>*ngForObjects</h1>
+<div class="wrapper--header">
+  <h1 class="title--header">YARD Sale</h1>
+  <div class="buttons">
+    <button type="button">All</button>
+    <button type="button">Clothes</button>
+    <button type="button">Electronics</button>
+    <button type="button">Forniture</button>
+    <button type="button">Toys</button>
+    <button type="button">Others</button>
+  </div>
+</div>
 <div class="products--grid">
   <div *ngFor="let product of products">
     <img [src]="product.image" alt="image" />
-    <h2>{{ product.price }}</h2>
+    <h2>$ {{ product.price }}</h2>
     <p>{{ product.name }}</p>
+    <i class="fa-solid fa-cart-plus"></i>
   </div>
 </div>
 
