@@ -1,25 +1,14 @@
-<div class="wrapper-register">
-  <p class="start">Iniciar sesion</p>
-  <p class="register">Registrarse</p>
-</div>
+<app-nav></app-nav>
+<app-products></app-products>
 
-<div class="wrapper--header">
-  <h1 class="title--header">YARD Sale</h1>
-  <div class="buttons">
-    <button type="button">All</button>
-    <button type="button">Clothes</button>
-    <button type="button">Electronics</button>
-    <button type="button">Forniture</button>
-    <button type="button">Toys</button>
-    <button type="button">Others</button>
-  </div>
-</div>
-<div class="products--grid">
-  <div *ngFor="let product of products">
-    <img [src]="product.image" alt="image" />
-    <h2>$ {{ product.price }}</h2>
-    <p>{{ product.name }}</p>
-  </div>
-</div>
-<hr />
-<footer>Made with love by Maria Luisa</footer>
+<!-- <p>
+  <input type="text" [(ngModel)]="imgParent" />
+</p>
+<button (click)="toggleImg()">Toggle image</button>
+<p>{{ showImg }}</p>
+<app-img
+  *ngIf="showImg"
+  (loaded)="onLoaded($event)"
+  [img]="imgParent"
+></app-img>
+<hr /> -->
