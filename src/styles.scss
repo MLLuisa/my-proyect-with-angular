@@ -12,6 +12,31 @@
   app-img {
     img {
       border-radius: 10px;
+      height: auto;
+    }
+  }
+}
+
+@media screen and (min-width: 40em) {
+  .products--grid {
+    app-img {
+      img {
+        border-radius: 10px;
+        height: 200px;
+        width: auto;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 64em) {
+  .products--grid {
+    app-img {
+      img {
+        border-radius: 10px;
+        height: 150px;
+        width: auto;
+      }
     }
   }
 }

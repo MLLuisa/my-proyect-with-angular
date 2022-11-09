@@ -1,6 +1,7 @@
 .products--grid {
   display: flex;
   flex-direction: column;
+  margin-top: 20px;
 }
 // tablet
 @media screen and (min-width: 40em) and (max-width: 63.9em){
@@ -8,6 +9,7 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 15px;
+    margin-top: 20px;
   }
 }
 
@@ -17,5 +19,6 @@
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-gap: 15px;
+    margin-top: 20px;
   }
 }
