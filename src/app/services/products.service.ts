@@ -12,7 +12,7 @@ import {
   UpdateProductDTO,
 } from '../models/product.model';
 import { environment } from '../../environments/environment';
-import { throwError } from 'rxjs';
+import { throwError, zip } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -72,6 +72,10 @@ export class ProductsService {
         offset,
       },
     });
+  }
+
+  fetchReadAndUpdate(id: string, dto: UpdateProductDTO) {
+    return zip(this.getProduct(id), this.update(id, dto));
   }
 
   create(dto: CreateProductDTO) {
