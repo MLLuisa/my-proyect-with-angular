@@ -11,7 +11,6 @@ import { User } from 'src/app/models/users.model';
 export class NavComponent implements OnInit {
   activeMenu = false;
   counter = 0;
-  token = '';
   profile: User | null = null;
 
   constructor(
@@ -30,15 +29,13 @@ export class NavComponent implements OnInit {
   }
 
   login() {
-    this.authService.login('maria@mail.com', '112233').subscribe((rta) => {
-      this.token = rta.access_token;
-      console.log(this.token);
-      this.getProfile;
-    });
-  }
-
-  getProfile() {
-    this.authService.profile(this.token).subscribe((user) => {
+    // this.authService.login('sebas@mail.com', '1212')
+    // .subscribe(rta => {
+    //   this.token = rta.access_token;
+    //   console.log(this.token);
+    //   this.getProfile();
+    // });
+    this.authService.loginAndGet('sebas@mail.com', '1212').subscribe((user) => {
       this.profile = user;
     });
   }
